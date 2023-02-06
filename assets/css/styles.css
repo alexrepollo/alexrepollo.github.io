@@ -1,0 +1,241 @@
+:root {
+  --background-img: url("../images/green-swamp.jpg");
+
+  /* colors */
+  --white-cream: #fffbd3;
+  --dark-green: #0f3400;
+  --darker-color: #1a1a1a;
+  --dark-color: #2d2d2d;
+  --white: #fffdfa;
+  --shadow-1: rgba(0, 0, 0, 0.1);
+  --shadow-2: rgba(0, 0, 0, 0.2);
+  --shadow-3: rgba(0, 0, 0, 0.3);
+  --shadow-4: rgba(0, 0, 0, 0.4);
+  --shadow-6: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-image: var(--background-img);
+  /* background-color: var(--white-cream); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: 'Raleway', sans-serif;
+  transition: all 1s ease; 
+}
+
+/* Estilos generales */
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-clara {
+  background-color: var(--white-cream);
+  color: var(--dark-green);
+}
+
+.seccion-glass {
+  color: var(--almost-white);
+  /* glassmorfism */
+  background: var(--shadow-2);
+  border-radius: 10px 10px;
+  box-shadow: 4px 4px 8px 2px var(--shadow-6); 
+  /* 0 4px 30px rgba(0, 0, 0, 0.1) */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.seccion-glass-h {
+  transition: all 0.3s ease;
+}
+.seccion-glass-h:hover {
+  background: var(--shadow-4);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/* Navbar */
+
+.navbar {
+  /* From https://css.glass */
+  background: var(--shadow-2);
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 2px 0px 4px 3px var(--shadow-1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.div-ul-nav {
+  display: flex;
+  justify-content: end;
+}
+
+.navbar-brand {
+  color: var(--white-cream);
+  margin: 0;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.img-nav {
+  height: 50px;
+}
+
+.navbar-brand:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+
+.nav-link {
+  color: var(--white-cream);
+  margin: 2px;
+  padding: 4px 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  margin: 5px 0;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--dark-green);
+  background-color:var(--white-cream);
+  
+  border-radius: 5px;
+  transform: translateY(-2px);
+  /* border-bottom: 1px solid var(--white); */
+}
+
+.nav-item-drop .nav-link {
+  font-size: 1.5rem;
+  padding:0 30px;
+  
+}
+
+
+
+/* Upp div */
+#upp {
+  height: 1px;
+  background-color: transparent;
+}
+
+
+
+/* Hero section */
+
+.hero {
+  min-height: 450px;
+  
+  text-align: center;
+  margin-top: 90px;
+}
+
+.hero-principal {
+  color: var(--white-cream);
+  padding: 3rem 3.1rem;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  margin-top: 10vh;
+  /* glassmorfism */
+  background: var(--shadow-2);
+  border-radius: 10px 10px;
+  box-shadow: 4px 4px 8px 2px var(--shadow-6), 0 4px 30px var(--shadow-1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: all 0.3s ease;
+}
+
+.hero-principal:hover {
+  background: var(--shadow-3);
+  box-shadow: 2px 6px 8px 2px var(--shadow-6), 0 4px 30px var(--shadow-1);
+  transform: translateY(-2px);
+
+}
+
+.hero-image-profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px 20px 40px 20px;
+}
+
+
+/* Sobre mi */
+
+.div-id-specific {
+  margin-bottom: 80px;
+}
+
+.sobre-mi {
+  min-height: 380px;
+  /* margin-top: 50px; */
+}
+
+.sobre-mi-cont {
+  margin: 20px 0;
+}
+
+
+.sobre-mi-title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--dark-green);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sobre-mi-description {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
+/* centrar los navbar items for screen size less than 767px */
+@media screen and (max-width: 767px) {
+  .div-ul-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* resizing profile image for screen size less than 311px */
+@media screen and (max-width: 311px) {
+
+  .hero-image-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+}
+
+
+
+
