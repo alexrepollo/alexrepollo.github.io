@@ -1,9 +1,11 @@
 :root {
-  --background-img: url("../images/green-swamp.jpg");
+  /* --background-img: url("../images/green-swamp.jpg"); */
+  --background-img: url("../images/desktop-notebook-background.webp");
 
   /* colors */
   --white-cream: #fffbd3;
-  --dark-green: #0f3400;
+  /* --dark-green: #0f3400; */
+  --dark-green: #342200;
   --darker-color: #1a1a1a;
   --dark-color: #2d2d2d;
   --white: #fffdfa;
@@ -49,7 +51,7 @@ section {
 }
 
 .seccion-glass {
-  color: var(--almost-white);
+  color: var(--white-cream);
   /* glassmorfism */
   background: var(--shadow-2);
   border-radius: 10px 10px;
@@ -108,7 +110,7 @@ section {
 .nav-link {
   color: var(--white-cream);
   margin: 2px;
-  padding: 4px 6px;
+  padding: 10px 6px;
   transition: all 0.3s ease;
 }
 
@@ -117,12 +119,12 @@ section {
 }
 
 .nav-item:hover .nav-link {
-  color: var(--dark-green);
-  background-color:var(--white-cream);
+  color: var(--white-cream);
+  background-color:var(--shadow-4);
   
   border-radius: 5px;
   transform: translateY(-2px);
-  /* border-bottom: 1px solid var(--white); */
+  border-bottom: 1px solid var(--white);
 }
 
 .nav-item-drop .nav-link {
