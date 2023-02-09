@@ -14,6 +14,9 @@
   --shadow-3: rgba(0, 0, 0, 0.3);
   --shadow-4: rgba(0, 0, 0, 0.4);
   --shadow-6: rgba(0, 0, 0, 0.6);
+
+  /* animations */
+  --navbar-visible: navbarVisible 1.2s ease-out 0s 1 normal;
 }
 
 html {
@@ -90,6 +93,7 @@ section {
   box-shadow: 2px 0px 4px 3px var(--shadow-1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  animation: var(--navbar-visible);
 }
 
 .div-ul-nav {
@@ -175,6 +179,8 @@ section {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 
+  animation: var(--navbar-visible);
+
   transition: all 0.3s ease;
 }
 
@@ -206,6 +212,7 @@ section {
 
 .sobre-mi-cont {
   margin: 20px 0;
+  animation: var(--navbar-visible);
 }
 
 
@@ -244,7 +251,7 @@ section {
   padding: 40px 0;
   display: flex;
   justify-content: center;
-  
+  animation: var(--navbar-visible);
 }
 
 .exp .container {
@@ -283,12 +290,19 @@ section {
 
 .icon-container {
   margin: 10px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-out;
 }
 
 .icon-container:hover {
   color: var(--white);
-  
+  filter: grayscale(0%) saturate(150%);
+  text-shadow: 1px 0 10px var(--white-cream);
+  box-shadow: 1px 0 10px var(--white-cream);
 }
+
+
+
 
 /* Iconos de habilidades */
 
@@ -354,6 +368,10 @@ section {
 .proyectos {
   padding: 40px 0;
   margin: 40px 0;
+}
+
+.proyectos .contenido {
+  animation: var(--navbar-visible);
 }
 
 .proyectos-cont {
@@ -441,6 +459,7 @@ section {
 footer {
   padding-top: 120px;
   margin-top: 140px;
+  animation: var(--navbar-visible);
 }
 
 .contacto-lema {
@@ -511,6 +530,16 @@ footer {
 
 
 /* Animations */
+
+@keyframes navbarVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 
 
