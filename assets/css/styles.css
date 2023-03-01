@@ -290,15 +290,16 @@ section {
 
 .icon-container {
   margin: 10px;
-  filter: grayscale(100%);
+  border-radius: 5px;
+  filter: grayscale(50%);
   transition: all 0.2s ease-out;
 }
 
 .icon-container:hover {
   color: var(--white);
-  filter: grayscale(0%) saturate(150%);
-  text-shadow: 1px 0 10px var(--white-cream);
-  box-shadow: 1px 0 10px var(--white-cream);
+  filter: grayscale(0%) saturate(150%) brightness(120%);
+  text-shadow: 0px 0px 15px var(--white-cream);
+  box-shadow: 0px 0px 15px 2px var(--white-cream);
 }
 
 
